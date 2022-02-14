@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
+  </head>
+  <body>
+    <h2>一言つぶやく</h2>
+    <form action="post-created" method="post">
+      <table>
+        <tr>
+          <td>何をつぶやく?
+          </td>
+          <td><input type="text" name="content" value=""></td>
+        </tr>
+      </table>
+      <input type="hidden" name="user_id" value="{{.UserId}}">
+      <input type="submit" class="btn-push btn-push-blue" value="記録する">
+    </form>
+  </body>
+</html>

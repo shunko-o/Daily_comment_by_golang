@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
+</head>
+<body>
+  <h2>{{ .user.Name}}のつぶやき一覧</h2>
+  <table class="list">
+    <tr>
+      <th>内容</th>
+      <th>登録日時</th>
+    </tr>
+    {{ range .postlist }}
+    <tr>
+      <td>{{.Content}}</td>
+      <td>{{.Created}}</td>
+    </tr>
+    {{ end }}
+  </table>
+  <button type="button" class="btn-push" onclick="location.href='./user-list'">ユーザー一覧画面に戻る</button>
+</body>
+</html>

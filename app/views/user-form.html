@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
+  </head>
+  <body>
+    {{if .Id}}
+    <h2>ユーザ情報の変更</h2>
+    <form action="user-update" method="post">
+    {{else}}
+    <h2>ユーザ情報の登録</h2>
+    <form action="user-confirm" method="post">  
+    {{end}}
+      <table>
+        <tr>
+          <td>ユーザー名</td>
+          <td><input type="text" name="name" value="{{.Name}}"></td>
+        </tr>
+      </table>
+      <input type="hidden" name="id" value="{{.Id}}">
+      <input type="submit" class="btn-push btn-push-blue" value="確認画面へ">
+    </form>
+  </body>
+</html>
